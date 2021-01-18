@@ -1,7 +1,6 @@
 library(tidyverse)  # Library data manipulation
 library(cluster)    # Library clustering algorithms
 library(factoextra) # Lirary clustering algorithms & visualization
-library(readxl)     # Library untuk membaca excedfll data type
 
 df <- read.csv('Data 06 November 2020.csv')  # Untuk Membaca data uji
 df <- na.omit(df)   # Untuk Menghapus Missing Value
