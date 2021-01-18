@@ -31,7 +31,7 @@ set.seed(1000)    # Random Number Generator
 fviz_nbclust(df, kmeans, method = "wss")
 
 
-# ====== 2. Average Silhouette Method ======
+# ====== 2. Silhouette Method ======
 # function untuk menghitung rata-rata nilai silhouette untuk k clusters
 avg_sil <- function(k) {
   km.res <- kmeans(df, centers = k, nstart = 25)
@@ -52,15 +52,4 @@ plot(k.values, avg_sil_values,
 # sama dengan sebelumnya menerapkan fviz_nbclust 
 # yang fungsinya juga dapat digunakan untuk Silhouette Method
 fviz_nbclust(df, kmeans, method = "silhouette")
-
-
-# ===== 3. Gap Statistic Method =====
-set.seed(1000)    # Random Number Generator
-# Function untuk menghitung Gap Statistic Methode
-gap_stat <- clusGap(df, FUN = kmeans, nstart = 25,
-                    K.max = 10, B = 100)
-# Mencetak Hasil
-print(gap_stat, method = "firstmax")
-# menerapkan fviz_gap_stat yang merupakan fungsi elbow method
-fviz_gap_stat(gap_stat)
 
