@@ -30,7 +30,3 @@ L(ditanya)
 
 
 # penghitungan hanya L saja, P belum
-# Anggota Kelompok : 
-# | Adivia Gilang Prakarsa (17523066)
-# | Agus Fikri Suyuthi (17523145)
-# | Wahluf Abidian (17523141)
